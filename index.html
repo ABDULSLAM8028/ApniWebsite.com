@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apni Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .content {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #35424a;
+        }
+        .download-link {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #35424a;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .stats {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #777;
+        }
+        .review-section {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .review-section h2 {
+            margin-top: 0;
+        }
+        .review-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .review-form input, .review-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-button {
+            padding: 10px;
+            background: #35424a;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .stars {
+            margin: 10px 0;
+        }
+        .stars input {
+            display: none;
+        }
+        .stars label {
+            font-size: 20px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .stars input:checked ~ label {
+            color: #f39c12;
+        }
+        .reviews-list {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Apni Website</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="content">
+    <h2>1. IGI (I'm Going In)</h2>
+    <p>IGI is a tactical shooter video game that requires stealth and strategy. Download now and experience the action!</p>
+    <a class="download-link" href="https://www.filehorse.com/download/file/IPna8K_Vm7NcEY4C8gHUYp7LtxuJV8pigXtD8ga-ATznwuqE5cxHwkV4nURtUjP_53d2VMOmruItArbulGHKhu8oD9T-WybKNzi-n_1ZXqY/">Download IGI</a>
+    <div class="stats">
+        <p>Likes: 1,200</p>
+        <p>Dislikes: 50</p>
+        <p>Downloads: 50,000+</p>
+        <p>Rating: 4.5/5</p>
+        <p>Reviews: 300</p>
+    </div>
+    <div class="review-section">
+        <h3>Rate this Game:</h3>
+        <div class="stars">
+            <input type="radio" id="igi-star5" name="igi-rating" value="5"><label for="igi-star5">?</label>
+            <input type="radio" id="igi-star4" name="igi-rating" value="4"><label for="igi-star4">?</label>
+            <input type="radio" id="igi-star3" name="igi-rating" value="3"><label for="igi-star3">?</label>
+            <input type="radio" id="igi-star2" name="igi-rating" value="2"><label for="igi-star2">?</label>
+            <input type="radio" id="igi-star1" name="igi-rating" value="1"><label for="igi-star1">?</label>
+        </div>
+        <textarea id="igi-review" placeholder="Your Review" rows="4" required></textarea>
+        <button onclick="submitReview('IGI')">Submit Review</button>
+        <div class="reviews-list" id="igi-reviews"></div>
+    </div>
+</div>
+
+<div class="content">
+    <h2>2. Freedom Fighters</h2>
+    <p>Join the resistance in Freedom Fighters. An engaging storyline and intense combat await you. Download here!</p>
+    <a class="download-link" href="https://uploadhaven.com/download/b93bad53dfdd8efc4958ff4fff6fb5dc">Download Freedom Fighters</a>
+    <div class="stats">
+        <p>Likes: 900</p>
+        <p>Dislikes: 30</p>
+        <p>Downloads: 40,000+</p>
+        <p>Rating: 4.3/5</p>
+        <p>Reviews: 250</p>
+    </div>
+    <div class="review-section">
+        <h3>Rate this Game:</h3>
+        <div class="stars">
+            <input type="radio" id="ff-star5" name="ff-rating" value="5"><label for="ff-star5">?</label>
+            <input type="radio" id="ff-star4" name="ff-rating" value="4"><label for="ff-star4">?</label>
+            <input type="radio" id="ff-star3" name="ff-rating" value="3"><label for="ff-star3">?</label>
+            <input type="radio" id="ff-star2" name="ff-rating" value="2"><label for="ff-star2">?</label>
+            <input type="radio" id="ff-star1" name="ff-rating" value="1"><label for="ff-star1">?</label>
+        </div>
+        <textarea id="ff-review" placeholder="Your Review" rows="4" required></textarea>
+        <button onclick="submitReview('Freedom Fighters')">Submit Review</button>
+        <div class="reviews-list" id="ff-reviews"></div>
+    </div>
+</div>
+
+<div class="content">
+    <h2>3. Call of Duty</h2>
+    <p>Experience the thrill of battle in Call of Duty. A classic first-person shooter that keeps you on the edge of your seat.</p>
+    <a class="download-link" href="https://call-of-duty-mobile.en.download.it/android/download">Download Call of Duty</a>
+    <div class="stats">
+        <p>Likes: 2,500</p>
+        <p>Dislikes: 100</p>
+        <p>Downloads: 100,000+</p>
+        <p>Rating: 4.7/5</p>
+        <p>Reviews: 500</p>
+    </div>
+    <div class="review-section">
+        <h3>Rate this Game:</h3>
+        <div class="stars">
+            <input type="radio" id="cod-star5" name="cod-rating" value="5"><label for="cod-star5">?</label>
+            <input type="radio" id="cod-star4" name="cod-rating" value="4"><label for="cod-star4">?</label>
+            <input type="radio" id="cod-star3" name="cod-rating" value="3"><label for="cod-star3">?</label>
+            <input type="radio" id="cod-star2" name="cod-rating" value="2"><label for="cod-star2">?</label>
+            <input type="radio" id="cod-star1" name="cod-rating" value="1"><label for="cod-star1">?</label>
+        </div>
+        <textarea id="cod-review" placeholder="Your Review" rows="4" required></textarea>
+        <button onclick="submitReview('Call of Duty')">Submit Review</button>
+        <div class="reviews-list" id="cod-reviews"></div>
+    </div>
+</div>
+
+<div class="content">
+    <h2>4. Counter-Strike</h2>
+    <p>Engage in team-based warfare in Counter-Strike. Perfect for competitive play and endless fun!</p>
+    <a class="download-link" href="#">Download Counter-Strike</a>
+    <div class="stats">
+        <p>Likes: 3,000</p>
+        <p>Dislikes: 200</p>
+        <p>Downloads: 150,000+</p>
+        <p>Rating: 4.8/5</p>
+        <p>Reviews: 600</p>
+    </div>
+    <div class="review-section">
+        <h3>Rate this Game:</h3>
+        <div class="stars">
+            <input type="radio" id="cs-star5" name="cs-rating" value="5"><label for="cs-star5">?</label>
+            <input type="radio" id="cs-star4" name="cs-rating" value="4"><label for="cs-star4">?</label>
+            <input type="radio" id="cs-star3" name="cs-rating" value="3"><label for="cs-star3">?</label>
+            <input type="radio" id="cs-star2" name="cs-rating" value="2"><label for="cs-star2">?</label>
+            <input type="radio" id="cs-star1" name="cs-rating" value="1"><label for="cs-star1">?</label>
+        </div>
+        <textarea id="cs-review" placeholder="Your Review" rows="4" required></textarea>
+        <button onclick="submitReview('Counter-Strike')">Submit Review</button>
+        <div class="reviews-list" id="cs-reviews"></div>
+    </div>
+</div>
+
+<div class="content">
+    <h2>5. Medal of Honor</h2>
+    <p>Step into the shoes of soldiers in World War II in Medal of Honor. Download now for a gripping experience!</p>
+    <a class="download-link" href="#">Download Medal of Honor</a>
+    <div class="stats">
+        <p>Likes: 1,500</p>
+        <p>Dislikes: 40</p>
+        <p>Downloads: 70,000+</p>
+        <p>Rating: 4.6/5</p>
+        <p>Reviews: 320</p>
+    </div>
+    <div class="review-section">
+        <h3>Rate this Game:</h3>
+        <div class="stars">
+            <input type="radio" id="mo-star5" name="mo-rating" value="5"><label for="mo-star5">?</label>
+            <input type="radio" id="mo-star4" name="mo-rating" value="4"><label for="mo-star4">?</label>
+            <input type="radio" id="mo-star3" name="mo-rating" value="3"><label for="mo-star3">?</label>
+            <input type="radio" id="mo-star2" name="mo-rating" value="2"><label for="mo-star2">?</label>
+            <input type="radio" id="mo-star1" name="mo-rating" value="1"><label for="mo-star1">?</label>
+        </div>
+        <textarea id="mo-review" placeholder="Your Review" rows="4" required></textarea>
+        <button onclick="submitReview('Medal of Honor')">Submit Review</button>
+        <div class="reviews-list" id="mo-reviews"></div>
+    </div>
+</div>
+
+<div class="content">
+    <h2>6. Far Cry</h2>
+    <p>Explore beautiful landscapes and take on dangerous foes in Far Cry. Adventure awaits you!</p>
+    <a class="download-link" href="#">Download Far Cry</a>
+    <div class="stats">
+        <p>Likes: 2,000</p>
+        <p>Dislikes: 70</p>
+        <p>Downloads: 90,000+</p>
+        <p>Rating: 4.7/5</p>
+        <p>Reviews: 400</p>
+    </div>
+    <div class="review-section">
+        <h3>Rate this Game:</h3>
+        <div class="stars">
+            <input type="radio" id="fc-star5" name="fc-rating" value="5"><label for="fc-star5">?</label>
+            <input type="radio" id="fc-star4" name="fc-rating" value="4"><label for="fc-star4">?</label>
+            <input type="radio" id="fc-star3" name="fc-rating" value="3"><label for="fc-star3">?</label>
+            <input type="radio" id="fc-star2" name="fc-rating" value="2"><label for="fc-star2">?</label>
+            <input type="radio" id="fc-star1" name="fc-rating" value="1"><label for="fc-star1">?</label>
+        </div>
+        <textarea id="fc-review" placeholder="Your Review" rows="4" required></textarea>
+        <button onclick="submitReview('Far Cry')">Submit Review</button>
+        <div class="reviews-list" id="fc-reviews"></div>
+    </div>
+</div>
+
+<script>
+    function submitReview(game) {
+        const rating = document.querySelector(`input[name='${game.replace(/\s+/g, '-').toLowerCase()}-rating']:checked`);
+        const reviewText = document.getElementById(`${game.replace(/\s+/g, '-').toLowerCase()}-review`).value;
+
+        if (rating && reviewText) {
+            const reviewsList = document.getElementById(`${game.replace(/\s+/g, '-').toLowerCase()}-reviews`);
+            const reviewItem = document.createElement('div');
+            reviewItem.innerHTML = `<strong>Rating: ${rating.value}?</strong><p>${reviewText}</p>`;
+            reviewsList.appendChild(reviewItem);
+
+            // Clear the input fields after submission
+            rating.checked = false;
+            document.getElementById(`${game.replace(/\s+/g, '-').toLowerCase()}-review`).value = '';
+        } else {
+            alert('Please provide a rating and a review!');
+        }
+    }
+</script>
+<meta name="google-adsense-account" content="ca-pub-1423799282897186">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1423799282897186"
+     crossorigin="anonymous"></script>
+</body>
+</html>
